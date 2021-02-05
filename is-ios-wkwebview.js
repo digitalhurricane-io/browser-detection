@@ -1,1 +1,11 @@
-module.exports = require("./dist/is-ios-wkwebview");
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var is_ios_webview_1 = require("./is-ios-webview");
+function isIosWKWebview(ua, statusBarVisible) {
+    statusBarVisible =
+        typeof statusBarVisible !== "undefined"
+            ? statusBarVisible
+            : window.statusbar.visible;
+    return is_ios_webview_1.default(ua) && statusBarVisible;
+}
+exports.default = isIosWKWebview;
