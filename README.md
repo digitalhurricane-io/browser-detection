@@ -1,3 +1,5 @@
+## Forked to add es6 imports
+
 # Browser Detection
 
 A utility for detecting browser support for Braintree libs.
